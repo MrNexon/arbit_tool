@@ -1,0 +1,33 @@
+<html lang="ru">
+<head>
+    <title>Arbit Tool | {{ page.title }} </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="{{ asset('vendor/nucleo/css/nucleo.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/argon.min.css') }}" rel="stylesheet">
+    {% block head %} {% endblock %}
+</head>
+<body>
+<!-- Sidenav -->
+{{ include('worker/parts/navbar.html.twig') }}
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    {{ include('worker/parts/topnav.html.twig') }}
+    {% block main_content %} {% endblock %}
+</div>
+
+
+<script src="{{ asset('vendor/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/js-cookie/js.cookie.js') }}"></script>
+<script src="{{ asset('vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
+<script src="{{ asset('vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
+
+<script src="{{ asset('vendor/chart.js/dist/Chart.min.js') }}"></script>
+<script src="{{ asset('vendor/chart.js/dist/Chart.extension.js') }}"></script>
+<script src="{{ asset('js/vendor/jvectormap/jquery-jvectormap-world-mill.min.js') }}"></script>
+<script src="{{ asset('js/vendor/jvectormap/jquery-jvectormap-world-mill.js') }}"></script>
+<!-- Argon JS -->
+<script src="{{ asset('js/argon.min.js') }}"></script>
+</body>
+</html>

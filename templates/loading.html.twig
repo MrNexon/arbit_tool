@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+<link href="{{ asset('styles/loading.css') }}" rel="stylesheet">
+    {% if auth.state != true %}
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="577601321600-9ir4meacvkjm3cbll5pkbc54n0lhgdr2.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    {% endif %}
+{% endblock %}
+
+{% block wrapper %}
+    <div class="content">
+        {% if auth.state %}
+        {{ include('parts/loading/loading_splash.html.twig') }}
+        {% else %}
+        {{ include('parts/loading/auth_form.html.twig') }}
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="copyright_content">
+        <span>© MTDL - 2020</span>
+        <span>All rights belong to MTDL</span>
+        <span>Use by third parties is not allowed!</span>
+    </div>
+{% endblock %}

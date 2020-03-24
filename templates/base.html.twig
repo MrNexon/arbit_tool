@@ -2,11 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>Arbit Tool</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="{{ asset('js/ajax_request.js') }}"></script>
+        <link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+
+        {% block head %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="wrapper">
+            {% block wrapper %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            {% block footer %}
+            {% endblock %}
+        </div>
     </body>
 </html>
